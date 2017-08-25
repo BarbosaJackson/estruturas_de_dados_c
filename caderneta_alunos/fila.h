@@ -52,3 +52,9 @@ void remover_elemento(fila *f) {
 		printf("Impossivel remover: fila vazia!\n");
 	}
 }
+
+void exibe_todos_alunos(fila *f) {
+	while(vazia(f) == 0){
+		remover_elemento(f);
+	}
+}

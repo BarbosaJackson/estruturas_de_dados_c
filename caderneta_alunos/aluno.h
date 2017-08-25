@@ -1,3 +1,5 @@
+#include "../funcoes_de_string.h"
+
 typedef struct aluno {
 	char nome[100], matricula[50];
 	float notas[4];
@@ -7,11 +9,9 @@ aluno insere_aluno(void){
 	aluno a;
 	int i;
 	printf("Digite o nome: ");
-	fflush(stdin);
-	scanf("%[^\n]s", a.nome);
+	leString(a.nome);
 	printf("Digite a matricula: ");
-	fflush(stdin);
-	scanf("%[^\n]s", a.matricula);
+	leString(a.matricula);
 	for(i = 0; i < 4; i++) {
 		printf("Digite a %d nota: ", i+1);
 		scanf("%f", &a.notas[i]);

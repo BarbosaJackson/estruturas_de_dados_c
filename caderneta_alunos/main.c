@@ -9,8 +9,8 @@ int main(int argc, char *argv[]) {
 	int op;
 	f = inicia_fila();
 	do{
-		printf("[ 1 ] Inserir\n[ 2 ] Remover\n[ 3 ] Resetar\n[ 0 ] Sair\n=>");
-		scanf("%d", &op);
+		printf("[ 1 ] Inserir\n[ 2 ] Remover\n[ 3 ] Resetar\n[ 4 ] Remover todos os alunos\n[ 0 ] Sair\n=>");
+		scanf("%d%*c", &op);
 		switch(op) {
 			case 0:
 				printf("Tchau!\n");
@@ -23,6 +23,9 @@ int main(int argc, char *argv[]) {
 				break;
 			case 3: 
 				f = inicia_fila();
+				break;
+			case 4: 
+				exibe_todos_alunos(&f);
 				break;
 			default:
 				printf("opcao invalidade, digite novamente!\n");
